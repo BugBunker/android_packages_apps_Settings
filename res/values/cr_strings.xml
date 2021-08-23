@@ -822,6 +822,9 @@
     <!-- Charging animation -->
     <string name="charging_animation_title">Charging animation</string>
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string>
+    <string name="system_charging">System Charging Options</string>
+    <string name="charging_animation_bg_title">Charging Background</string>
+    <string name="charging_animation_bg_summary">Enabling this option will make the background on System Animation to black</string>
 
     <!-- One shot automatic brightness -->
     <string name="auto_brightness_one_shot_title">One shot auto-brightness</string>
