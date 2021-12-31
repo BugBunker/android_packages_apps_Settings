@@ -1426,4 +1426,8 @@
     <string name="sound_summary">Sound settings, Pulse and other volume customization</string>
     <string name="user_summary">Verious User interface customization</string>
     <string name="about_summary">Know about this project</string>
+
+    <!-- Idle Manager -->
+    <string name="idle_manager_title">Kill background processes</string>
+    <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 </resources>
