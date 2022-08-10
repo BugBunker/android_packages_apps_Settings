@@ -68,6 +68,9 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String KEY_STATUS_BAR_BATTERY_TEXT_CHARGING = "status_bar_battery_text_charging";
     private static final String VOLTE_ICON_STYLE = "volte_icon_style";
     private static final String VOWIFI_ICON_STYLE = "vowifi_icon_style";
+    private static final String KEY_STATUSBAR_TOP_PADDING = "statusbar_top_padding";
+    private static final String KEY_STATUSBAR_LEFT_PADDING = "statusbar_left_padding";
+    private static final String KEY_STATUSBAR_RIGHT_PADDING = "statusbar_right_padding";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -176,6 +179,18 @@ public class StatusBar extends SettingsPreferenceFragment implements
             mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries_rtl);
             mQuickPulldown.setEntryValues(R.array.status_bar_quick_qs_pulldown_values_rtl);
         }
+
+        ((CustomSeekBarPreference) findPreference(KEY_STATUSBAR_LEFT_PADDING)).setDefaultValue(
+                getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_padding_start),
+                true);
+
+        ((CustomSeekBarPreference) findPreference(KEY_STATUSBAR_RIGHT_PADDING)).setDefaultValue(
+                getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_padding_end),
+                true);
+
+        ((CustomSeekBarPreference) findPreference(KEY_STATUSBAR_TOP_PADDING)).setDefaultValue(
+                getResources().getDimensionPixelSize(com.android.internal.R.dimen.status_bar_padding_top),
+                true);
     }
 
     @Override
