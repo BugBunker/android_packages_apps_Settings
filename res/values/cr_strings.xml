@@ -1288,4 +1288,11 @@
     <string name="kg_custom_clock_top_margin_title">Double-line clock position</string>
     <string name="kg_small_clock_text_size_title">Small clock size</string>
     <string name="kg_large_clock_text_size_title">Double-line clock size</string>
+    
+        <!-- Quicksettings media category -->
+    <string name="media_category">Media player</string>
+
+    <!-- Squiggle animation -->
+    <string name="show_squiggle_animation_title">Show squiggle animation</string>
+    <string name="show_squiggle_animation_summary">Show media panel squiggle animation\nAfter change need to switch music, pause music or move the progress bar to apply</string>
 </resources>
