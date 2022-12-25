@@ -16,6 +16,7 @@
 
     <!-- riceDroid versioning -->
     <string name="rice_version_title">RiceOS Version</string>
+    <string name="about_device_info">About RiceOS Device</string>
     <string name="rice_device_title">Device</string>
     <string name="rice_build_version_title">Build Version</string>
     <string name="rice_build_date_title">Build Date</string>
