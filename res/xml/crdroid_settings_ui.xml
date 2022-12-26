@@ -27,6 +27,14 @@
         android:summary="@string/doze_display_summary"
         android:fragment="com.crdroid.settings.fragments.ui.DozeSettings" />
 
+    <!-- UI style -->
+    <Preference
+        android:key="android.theme.customization.style"
+        android:icon="@drawable/ic_color_bucket"
+        android:title="@string/theme_customization_ui_style_title"
+        android:summary="@string/theme_customization_ui_style_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.UIStyles"/>
+
     <!-- Charging animation -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="charging_animation"
