@@ -23,6 +23,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -45,6 +46,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.preferences.CustomSeekBarPreference;
+import com.crdroid.settings.preferences.SystemSettingListPreference;
 
 import lineageos.providers.LineageSettings;
 
@@ -64,6 +66,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String KEY_PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String KEY_PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
     private static final String QS_PAGE_TRANSITIONS = "custom_transitions_page_tile";
+    private static final String KEY_QS_PANEL_STYLE  = "qs_panel_style";
 
     private ListPreference mShowBrightnessSlider;
     private ListPreference mBrightnessSliderPosition;
@@ -72,6 +75,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
     private SystemSettingListPreference mPageTransitions;
+    private Handler mHandler;
+    private IOverlayManager mOverlayManager;
+    private IOverlayManager mOverlayService;
+    private SystemSettingListPreference mQsStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -86,6 +93,14 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         final Context mContext = getActivity().getApplicationContext();
         final ContentResolver resolver = mContext.getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mUtils = new Utils(getActivity());
+
+        mOverlayService = IOverlayManager.Stub
+        .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
+
+        mQsStyle = (SystemSettingListPreference) findPreference(KEY_QS_PANEL_STYLE);
+        mCustomSettingsObserver.observe();
 
         mPageTransitions = (SystemSettingListPreference) findPreference(QS_PAGE_TRANSITIONS);
         mPageTransitions.setOnPreferenceChangeListener(this);
@@ -143,8 +158,78 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             mPageTransitions.setSummary(
                     mPageTransitions.getEntries()[index]);
             return true;
+        } else if (preference == mQsStyle) {
+            mCustomSettingsObserver.observe();
+            return true;
         }
         return false;
+    }
+
+    private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
+    private class CustomSettingsObserver extends ContentObserver {
+
+        CustomSettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            Context mContext = getContext();
+            ContentResolver resolver = mContext.getContentResolver();
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.QS_PANEL_STYLE),
+                    false, this, UserHandle.USER_ALL);
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_STYLE))) {
+                updateQsStyle();
+            }
+        }
+    }
+
+    private void updateQsStyle() {
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        int qsPanelStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT);
+
+        switch (qsPanelStyle) {
+            case 0:
+              setQsStyle("com.android.systemui");
+              break;
+            case 1:
+              setQsStyle("com.android.system.qs.outline");
+              break;
+            case 2:
+            case 3:
+              setQsStyle("com.android.system.qs.twotoneaccent");
+              break;
+            case 4:
+              setQsStyle("com.android.system.qs.shaded");
+              break;
+            case 5:
+              setQsStyle("com.android.system.qs.cyberpunk");
+              break;
+            case 6:
+              setQsStyle("com.android.system.qs.neumorph");
+              break;
+            case 7:
+              setQsStyle("com.android.system.qs.reflected");
+              break;
+            case 8:
+              setQsStyle("com.android.system.qs.surround");
+              break;
+            case 9:
+              setQsStyle("com.android.system.qs.thin");
+              break;
+            default:
+              break;
+        }
+    }
+
+    public void setQsStyle(String overlayName) {
+        mUtils.setOverlayEnabled("android.theme.customization.qs_panel", overlayName, "com.android.systemui");
     }
 
     public static void reset(Context mContext) {
@@ -185,6 +270,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 LineageSettings.Secure.QS_BRIGHTNESS_SLIDER_POSITION, 0, UserHandle.USER_CURRENT);
         LineageSettings.Secure.putIntForUser(resolver,
                 LineageSettings.Secure.QS_SHOW_AUTO_BRIGHTNESS, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.QS_PANEL_STYLE, 0, UserHandle.USER_CURRENT);
     }
 
     private void updateAnimTileStyle(int tileAnimationStyle) {
