@@ -59,20 +59,21 @@ Copyright (C) The 2022 RiceDroid Project
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:textColor="?android:attr/colorAccent"
-                        android:textSize="16sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/deviceName"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:fadingEdge="horizontal"
                         android:layout_marginTop="2dp"
                         android:gravity="start|center_vertical"
                         android:layout_gravity="start|center_vertical"
                         android:scrollHorizontally="true"
-                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="?android:attr/colorAccent"
-                        android:textSize="16sp" />
+                        android:textSize="13sp" />
                         
      <LinearLayout
         android:layout_width="wrap_content"

@@ -16,7 +16,7 @@
 
     <!-- riceDroid versioning -->
     <string name="rice_version_title">RiceOS Version</string>
-    <string name="about_device_info">About RiceOS Device</string>
+    <string name="about_device_info">RiceDroid Device</string>
     <string name="rice_device_title">Device</string>
     <string name="rice_build_version_title">Build Version</string>
     <string name="rice_build_date_title">Build Date</string>
@@ -37,7 +37,7 @@
     <string name="connectivity_category_title">connectivity</string>
     
     <string name="navbar_gesture_custom">Navigation Gestures Customizations</string>
-    <string name="usercard_summary">Certified riceDroid user</string>
+    <string name="usercard_summary">Device owner</string>
     
      <!-- About page -->
     <string name="battery">Battery</string>
@@ -94,5 +94,8 @@
     <!-- Ignore window secure -->
     <string name="ignore_window_secure_title">Ignore secure window flag</string>
     <string name="ignore_window_secure_summary">Remove screenshot and screenrecord limits for all apps. This can be convenient in some cases but may lead to privacy leaks.</string>
+    
+    <string name="top_level_settings_title">Settings</string>
+    <string name="my_device_settings">My device</string>
 </resources>
 
