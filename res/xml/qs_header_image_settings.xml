@@ -71,7 +71,7 @@
         android:key="qs_header_image_padding_side"
         android:title="@string/qs_header_image_padding_side_title"
         android:max="50"
-        android:min="-50"
+        settings:min="-50"
         android:dependency="qs_header_image_enabled"
         android:defaultValue="0" />
 
@@ -79,7 +79,7 @@
         android:key="qs_header_image_padding_top"
         android:title="@string/qs_header_image_padding_top_title"
         android:max="150"
-        android:min="-20"
+        settings:min="-20"
         android:dependency="qs_header_image_enabled"
         android:defaultValue="0" />
 

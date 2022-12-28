@@ -17,10 +17,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- App Title -->
-    <string name="crdroid_settings_title">Ghost Lab</string>
-    <string name="crdroid_settings_summary">Let the hunt begun</string>
+    <string name="crdroid_settings_title">GhostOS Settings</string>
+    <string name="crdroid_settings_summary">Open Madness</string>
     <string name="reset_settings_title">Reset settings</string>
-    <string name="reset_settings_message">This will reset most lv settings to their default values for the current user. Would you like to continue?</string>
+    <string name="reset_settings_message">This will reset most GhostOS settings to their default values for the current user. Would you like to continue?</string>
 
     <!-- Personalization Categories -->
     <string name="button_title">Buttons</string>
@@ -69,13 +69,13 @@
     <string name="changelog_crdroid_error">Unable to load changelog</string>
 
     <!-- About crDroid -->
-    <string name="about_crdroid">About crDroid</string>
+    <string name="about_crdroid">About GhostOS</string>
     <string name="about_device_name">Device</string>
 
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Share crDroid</string>
+    <string name="share_crdroid_title">Share GhostOS</string>
     <string name="share_crdroid_summary">Let others know about crDroid</string>
-    <string name="share_message">Check out if #crDroidAndroid is available for your device @ https://crdroid.net/</string>
+    <string name="share_message">its a crdroid fork, Check out if #crDroidAndroid is available for your device @ https://crdroid.net/</string>
     <string name="share_chooser_title">Share crDroid</string>
 
     <!-- Sites crDroid -->
@@ -130,6 +130,7 @@
     <!-- Hardware info -->
     <string name="platform_revision">Platform</string>
     <string name="total_ram">Total RAM</string>
+    <string name="hardware_info_title">Hardware</string>
 
     <!-- Notification log -->
     <string name="notification_log_summary">Show notifications history log</string>
@@ -270,6 +271,8 @@
     <!-- UI settings -->
     <string name="monet_title">Monet settings</string>
     <string name="monet_summary">Customize Monet theme engine</string>
+    <string name="ui_theme_engine_title">Theme engine</string>
+    <string name="ui_theme_engine_summary">Enable icon packs, themes etc</string>
 
     <!-- Monet Engine -->
     <string name="monet_engine_custom_color_title">Accent color</string>
@@ -362,12 +365,14 @@
     <string name="lockscreen_doubletap_sleep_summary">Double-tap on the lock screen to put device asleep</string>
 
     <!-- Font style / Icon pack -->
+    <string name="theme_customization_clock_font_title">Clock Font style</string>
+    <string name="theme_customization_clock_font_summary">Set lockscreen clock font style</string>
     <string name="theme_customization_font_title">Font style</string>
     <string name="theme_customization_font_summary">Set system font style</string>
-    <string name="theme_customization_icon_pack_title">Icon pack</string>
-    <string name="theme_customization_icon_pack_summary">Set custom icon pack style</string>
-    <string name="theme_customization_icon_shape_title">Icon shape</string>
-    <string name="theme_customization_icon_shape_summary">Set system icon shape style</string>
+    <string name="theme_customization_icon_pack_title">System icon pack</string>
+    <string name="theme_customization_icon_pack_summary">Set system custom icon pack style</string>
+    <string name="theme_customization_icon_shape_title">System shapes</string>
+    <string name="theme_customization_icon_shape_summary">Set system shapes style</string>
     <string name="theme_customization_signal_icon_title">Signal icon style</string>
     <string name="theme_customization_signal_icon_summary">Set custom signal icon style</string>
     <string name="theme_customization_wifi_icon_title">WiFi icon style</string>
@@ -1486,4 +1491,32 @@
 
     <string name="lockscreen_user_switcher_title">User Switcher</string>
     <string name="lockscreen_user_switcher_summary">Show user switcher when unlocking secured device</string>
+    
+   <!-- Custom settings dashboard style -->
+    <string name="settings_dashboard_style_title">Settings Styles</string>
+    <string name="settings_dashboard_style_oos">Sushi(legacy OOS)</string>
+    <string name="settings_dashboard_style_rui">Oxygen/ColorOS</string>
+    <string name="settings_dashboard_style_arc">Arcane</string>
+    <string name="settings_dashboard_style_aosp">Stock pixel</string>
+    <string name="settings_dashboard_style_mt">Google material you</string>
+    <string name="settings_dashboard_style_card">Ayan\'s card ui</string>
+    <string name="settings_home_style_title">Searchbar style</string>
+    <string name="settings_home_style_summary">Use AOSP settings homepage style</string>
+    <string name="settings_user_card_title">Hide user card preference</string>
+    <string name="settings_user_card_summary">Hide the extra user profile card below the searchbar</string>
+    <string name="about_card_style_title">About phone style</string>
+    <string name="about_card_style_banner_one">Centered wallpaper banner</string>
+    <string name="about_card_style_banner_one_high">Centered wallpaper banner (big)</string>
+    
+    <!-- Settings Header -->
+    <string name="settings_header_image_title">Settings header image</string>
+    <string name="settings_header_text_title">Settings header text</string>
+    <string name="settings_header_text_enabled_title">Set settings header text</string>
+    <string name="settings_header_text_summary">Custom header text for settings homepage banner (Leave empty for blank header text)</string>
+    <string name="settings_header_image_random_title">Random Settings header image</string>
+    <string name="settings_header_image_random_summary">Enable random aesthetic settings dashboard banner/header images</string>
+    
+    <!-- Settings Greetings -->
+    <string name="settings_contextual_message_title">Settings contextual messages</string>
+    <string name="settings_contextual_message_summary">Enable settings homepage messages that changes base on current time of the day</string>
 </resources>

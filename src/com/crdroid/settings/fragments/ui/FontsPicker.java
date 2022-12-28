@@ -91,7 +91,7 @@ public class FontsPicker extends SettingsPreferenceFragment {
                 R.layout.item_view, container, false);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         Adapter mAdapter = new Adapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
@@ -137,8 +137,8 @@ public class FontsPicker extends SettingsPreferenceFragment {
                 .orElse("android");
 
             holder.title.setText("android".equals(pkg) ? "Default" : label);
+            holder.title.setTypeface(Typeface.create("android".equals(pkg) ? "sans-serif" : label.toLowerCase().replaceAll(" ",""), Typeface.NORMAL));
             holder.title.setTextSize(20);
-            holder.title.setTypeface(getTypeface(holder.title.getContext(), pkg));
             holder.name.setVisibility(View.GONE);
 
             if (currentPackageName.equals(pkg)) {
@@ -185,21 +185,6 @@ public class FontsPicker extends SettingsPreferenceFragment {
                 holder.itemView.setActivated(isActivated);
             }
         }
-    }
-
-    public Typeface getTypeface(Context context, String pkg) {
-        try {
-            PackageManager pm = context.getPackageManager();
-            Resources res = pkg.equals("android") ? Resources.getSystem()
-                    : pm.getResourcesForApplication(pkg);
-            return Typeface.create(res.getString(
-                    res.getIdentifier("config_bodyFontFamily",
-                    "string", pkg)), Typeface.NORMAL);
-        }
-        catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     public String getLabel(Context context, String pkg) {
