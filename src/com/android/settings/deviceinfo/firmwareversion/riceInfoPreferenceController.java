@@ -91,7 +91,7 @@ public class riceInfoPreferenceController extends AbstractPreferenceController {
         final String isOfficial = this.mContext.getString(R.string.build_is_official_title);
 	final String isCommunity = this.mContext.getString(R.string.build_is_community_title);
 	
-	if (buildType.equalsIgnoreCase("Official")) {
+	if (buildType.toLowerCase().contains("official")) {
 		return isOfficial;
 	} else {
 		return isCommunity;
@@ -108,9 +108,9 @@ public class riceInfoPreferenceController extends AbstractPreferenceController {
 	final String isCommMiss = this.mContext.getString(R.string.build_is_community_summary_oopsie);
 	final String isCommFine = this.mContext.getString(R.string.build_is_community_summary, riceMaintainer);
 	
-	if (buildType.equalsIgnoreCase("Official") && !riceMaintainer.equalsIgnoreCase("Unknown")) {
+	if (buildType.toLowerCase().contains("official") && !riceMaintainer.equalsIgnoreCase("Unknown")) {
 		return isOffFine;
-	} else if (buildType.equalsIgnoreCase("Official") && riceMaintainer.equalsIgnoreCase("Unknown")) {
+	} else if (buildType.toLowerCase().contains("official") && riceMaintainer.equalsIgnoreCase("Unknown")) {
 		return isOffMiss;
 	} else if (buildType.equalsIgnoreCase("Community") && riceMaintainer.equalsIgnoreCase("Unknown")) {
 		return isCommMiss;
@@ -139,7 +139,7 @@ public class riceInfoPreferenceController extends AbstractPreferenceController {
 	buildVerPref.setSummary(buildVer);
         arcVerPref.setSummary(riceVersion);
         arcDevPref.setSummary(riceDevice);
-	if (isOfficial.equalsIgnoreCase("Official")) {
+	if (isOfficial.toLowerCase().contains("official")) {
 		 buildStatusPref.setIcon(R.drawable.verified);
 	} else {
 		buildStatusPref.setIcon(R.drawable.unverified);
