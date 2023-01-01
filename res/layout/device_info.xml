@@ -43,37 +43,40 @@ Copyright (C) The 2022 RiceDroid Project
                         android:fadingEdge="horizontal"
                         android:gravity="start|center_vertical"
                         android:layout_gravity="start|center_vertical"
-                        android:scrollHorizontally="true"
-                        android:singleLine="true"
-                        android:textColor="?android:attr/colorAccent"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/romCodeName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fadingEdge="horizontal"
-                        android:layout_marginTop="2dp"
-                        android:gravity="start|center_vertical"
-                        android:layout_gravity="start|center_vertical"
+                        android:fontFamily="@*android:string/config_headlineFontFamily"
                         android:scrollHorizontally="true"
                         android:singleLine="true"
                         android:textColor="?android:attr/colorAccent"
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/romCodeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="horizontal"
+                        android:paddingTop="9dp"
+                        android:gravity="start|center_vertical"
+                        android:layout_gravity="start|center_vertical"
+                        android:fontFamily="@*android:string/config_headlineFontFamily"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="?android:attr/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
                         android:id="@+id/deviceName"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:fadingEdge="horizontal"
-                        android:layout_marginTop="2dp"
+                        android:paddingTop="9dp"
                         android:gravity="start|center_vertical"
                         android:layout_gravity="start|center_vertical"
+                        android:fontFamily="@*android:string/config_headlineFontFamily"
                         android:scrollHorizontally="true"
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textColor="?android:attr/colorAccent"
-                        android:textSize="13sp" />
+                        android:textSize="16sp" />
                         
                 </LinearLayout>
 
