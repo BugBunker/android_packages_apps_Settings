@@ -28,8 +28,6 @@ class AboutDevice : FrameLayout {
         val versionCode = SystemProperties.get("ro.riseui.code")
 
         findViewById<TextView>(R.id.romVersion).text = (context.getString(R.string.version) + " "  + versionCode).toString()
-        
-        findViewById<TextView>(R.id.romCodeName).text = ("#gtrcd").toString()
 
         // Device
         var mDeviceName = SystemProperties.get("ro.product.product.device")

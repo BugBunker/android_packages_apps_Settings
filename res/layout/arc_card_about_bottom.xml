@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/rice_card_build_status_background"
+    android:background="@drawable/rice_preference_about_bottom"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:layout_marginBottom="@dimen/pref_top_card_bottom_margin"
+    android:layout_marginBottom="@dimen/pref_bot_card_bottom_margin"
     android:paddingEnd="6dp"
     android:paddingStart="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textColor="@color/xd_background1"
+                android:textColor="@color/op_control_text_color_primary"
                 style="@style/op_control_text_style_h6" />
 
             <TextView
@@ -45,7 +45,7 @@
                 android:layout_alignLeft="@android:id/title"
                 android:layout_marginTop="2.0dip"
                 android:maxLines="4"
-                android:textColor="@color/xd_background2" />
+                android:textColor="@color/op_control_text_color_secondary" />
         </RelativeLayout>
 
         <FrameLayout
@@ -60,6 +60,7 @@
                 android:padding="1.5dip"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:tint="?android:attr/colorAccent"
                 app:maxHeight="52.5dp"
                 app:maxWidth="52.5dp" />
 

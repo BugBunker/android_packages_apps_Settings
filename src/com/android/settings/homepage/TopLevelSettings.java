@@ -707,7 +707,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             
     private void setDashboardStyle(Context context) {
         mDashBoardStyle = Settings.System.getIntForUser(context.getContentResolver(),
-                    "settings_dashboard_style", 0, UserHandle.USER_CURRENT);
+                    Settings.System.SETTINGS_DASHBOARD_STYLE, 0, UserHandle.USER_CURRENT);
     }
     
     private void getAboutPhoneStyle(Context context) {

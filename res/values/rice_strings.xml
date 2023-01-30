@@ -54,6 +54,7 @@
     <string name="device_name">Device name</string>
     <string name="about_us_info_category_title">About Us</string>
     <string name="rice_revision">RiceDroid Revision</string>
+    <string name="rice_model_info">Device Information</string>
     
     <string name="dashboard_morning1">Good Morning!</string>
     <string name="dashboard_morning2">The Sun is up!</string>

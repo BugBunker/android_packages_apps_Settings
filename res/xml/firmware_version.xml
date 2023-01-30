@@ -39,7 +39,7 @@
     <!-- device_title -->
     <Preference
         android:key="rice_device"
-        settings:layout="@layout/arc_card_about"
+        settings:layout="@layout/arc_card_about_middle"
         android:title="@string/rice_device_title"
         android:icon="@drawable/ic_build_number"
         settings:enableCopying="true"
@@ -51,7 +51,7 @@
         android:title="@string/firmware_version"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_android_version"
-        settings:layout="@layout/arc_card_about"
+        settings:layout="@layout/arc_card_about_middle"
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
@@ -59,7 +59,7 @@
     <!-- version_title -->
     <Preference
         android:key="rice_version"
-        settings:layout="@layout/arc_card_about"
+        settings:layout="@layout/arc_card_about_middle"
         android:title="@string/rice_version_title"
         android:icon="@drawable/ic_rice"
         settings:enableCopying="true"
@@ -74,14 +74,14 @@
         android:key="security_key"
         android:title="@string/security_patch"
         android:icon="@drawable/ic_dot_security"
-        settings:layout="@layout/arc_card_about"
+        settings:layout="@layout/arc_card_about_middle"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
         
     <!-- Build date -->
     <Preference
         android:key="rice_build_version"
-        settings:layout="@layout/arc_card_about"
+        settings:layout="@layout/arc_card_about_middle"
         android:title="@string/rice_build_version_title"
         android:icon="@drawable/ic_legal"
         settings:enableCopying="true"
@@ -93,7 +93,7 @@
         android:title="@string/kernel_version"
         android:summary="@string/summary_placeholder"
         android:icon="@drawable/ic_settings_omnigears"
-        settings:layout="@layout/arc_card_about"
+        settings:layout="@layout/arc_card_about_bottom"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
 
