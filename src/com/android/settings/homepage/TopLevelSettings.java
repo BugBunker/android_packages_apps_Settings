@@ -312,10 +312,10 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.top_level_preference_oos_middle);
             } else if (key.equals("top_level_about_device")){
             	if (mAboutPhoneStyle == 1) {
-                preference.setLayoutResource(R.layout.top_level_preference_about_round);
+                preference.setLayoutResource(R.layout.top_level_preference_about);
                 preference.setOrder(-180);
                 } else if (mAboutPhoneStyle == 2) {
-                preference.setLayoutResource(R.layout.top_level_preference_about_high_round);
+                preference.setLayoutResource(R.layout.top_level_preference_about_high);
                 preference.setOrder(-180);
                 } else {
                 preference.setLayoutResource(R.layout.top_level_preference_oos_bottom);
@@ -409,10 +409,10 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.top_level_preference_wellbeing_mt);
             } else if (key.equals("top_level_about_device")){
             	if (mAboutPhoneStyle == 1) {
-                preference.setLayoutResource(R.layout.top_level_preference_about_round);
+                preference.setLayoutResource(R.layout.top_level_preference_about);
                 preference.setOrder(-180);
                 } else if (mAboutPhoneStyle == 2) {
-                preference.setLayoutResource(R.layout.top_level_preference_about_high_round);
+                preference.setLayoutResource(R.layout.top_level_preference_about_high);
                 preference.setOrder(-180);
                 } else {
                 preference.setLayoutResource(R.layout.top_level_preference_mt_bottom);
@@ -464,10 +464,10 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 gAppsExists = true;
             } else if (key.equals("top_level_about_device")){
             	if (mAboutPhoneStyle == 1) {
-                preference.setLayoutResource(R.layout.top_level_preference_about_round_circle);
+                preference.setLayoutResource(R.layout.top_level_preference_about);
                 preference.setOrder(-180);
                 } else if (mAboutPhoneStyle == 2) {
-                preference.setLayoutResource(R.layout.top_level_preference_about_high_round_circle);
+                preference.setLayoutResource(R.layout.top_level_preference_about_high);
                 preference.setOrder(-180);
                 } else {
                 preference.setLayoutResource(R.layout.top_level_preference_bottom_card);

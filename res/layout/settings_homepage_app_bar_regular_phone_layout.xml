@@ -25,6 +25,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
         android:orientation="horizontal">
 
         <TextView
@@ -38,7 +39,7 @@
             android:id="@+id/account_avatar"
             android:layout_width="@dimen/avatar_length"
             android:layout_height="@dimen/avatar_length"
-            android:layout_marginTop="63dp"
+            android:layout_marginTop="78dp"
             android:layout_marginEnd="@dimen/avatar_margin_end"
             android:visibility="invisible"
             android:accessibilityTraversalAfter="@id/homepage_title"

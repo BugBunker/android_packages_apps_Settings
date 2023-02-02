@@ -17,43 +17,11 @@
         android:layout_marginVertical="6dp"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="0.0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1.0"
-            android:layout_marginEnd="10dp">
-            <TextView
-                android:ellipsize="marquee"
-                android:id="@android:id/title"
-                android:fadingEdge="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wellbeing_title"
-                android:singleLine="true"
-                android:textColor="@color/op_control_text_color_primary"
-                style="@style/op_control_text_style_h6" />
-
-            <TextView
-                android:id="@android:id/summary"
-                style="@style/op_control_text_style_body1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@android:id/title"
-                android:layout_alignStart="@android:id/title"
-                android:layout_alignLeft="@android:id/title"
-                android:layout_marginTop="2.0dip"
-                android:maxLines="4"
-                android:textColor="@color/op_control_text_color_secondary" />
-        </RelativeLayout>
-
         <FrameLayout
             android:id="@id/icon_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp">
 
             <androidx.preference.internal.PreferenceImageView
@@ -75,13 +43,54 @@
 
         </FrameLayout>
 
-        <LinearLayout
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:id="@android:id/widget_frame"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"/>
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="10dp">
+            <TextView
+                android:ellipsize="marquee"
+                android:id="@android:id/title"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/op_control_text_color_primary"
+                style="@style/op_control_text_style_h6" />
+
+            <TextView
+                android:id="@android:id/summary"
+                style="@style/op_control_text_style_body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/title"
+                android:layout_alignStart="@android:id/title"
+                android:layout_alignLeft="@android:id/title"
+                android:layout_marginTop="2.0dip"
+                android:maxLines="4"
+                android:textColor="@color/op_control_text_color_secondary" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:paddingHorizontal="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true"
+            app:cardBackgroundColor="#00000000"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="99dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow"
+                    android:tint="@color/op_control_text_color_secondary" />   
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>
