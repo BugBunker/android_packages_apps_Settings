@@ -24,6 +24,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 
 public class bannerHeaderView extends ImageView {
 
@@ -48,9 +50,12 @@ public class bannerHeaderView extends ImageView {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        int mImageDrawable = Settings.System.getIntForUser(mContext.getContentResolver(),
+    int mImageDrawable = Settings.System.getIntForUser(mContext.getContentResolver(),
                     "settings_header_image", 0, UserHandle.USER_CURRENT);
-	String bannerImage = "banner_" + String.valueOf(mImageDrawable);
+    boolean randomBanner = Settings.System.getIntForUser(mContext.getContentResolver(),
+                    "settings_header_image_random", 0, UserHandle.USER_CURRENT) == 1;
+    int randomBannerImage = ThreadLocalRandom.current().nextInt(0, 98);
+	String bannerImage = "banner_" + String.valueOf(randomBanner ?  randomBannerImage : mImageDrawable);
 	int resId = getResources().getIdentifier(bannerImage, "drawable", "com.android.settings");
         setImageResource(resId);
     }
