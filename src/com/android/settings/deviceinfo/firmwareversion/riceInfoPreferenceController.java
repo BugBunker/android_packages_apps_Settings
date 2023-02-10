@@ -108,9 +108,9 @@ public class riceInfoPreferenceController extends AbstractPreferenceController {
 	final String isCommMiss = this.mContext.getString(R.string.build_is_community_summary_oopsie);
 	final String isCommFine = this.mContext.getString(R.string.build_is_community_summary, riceMaintainer);
 	
-	if (buildType.toLowerCase().contains("official") && !riceMaintainer.equalsIgnoreCase("Unknown")) {
+	if (buildType.toLowerCase().equals("official") && !riceMaintainer.equalsIgnoreCase("Unknown")) {
 		return isOffFine;
-	} else if (buildType.toLowerCase().contains("official") && riceMaintainer.equalsIgnoreCase("Unknown")) {
+	} else if (buildType.toLowerCase().equals("official") && riceMaintainer.equalsIgnoreCase("Unknown")) {
 		return isOffMiss;
 	} else if (buildType.equalsIgnoreCase("Community") && riceMaintainer.equalsIgnoreCase("Unknown")) {
 		return isCommMiss;
