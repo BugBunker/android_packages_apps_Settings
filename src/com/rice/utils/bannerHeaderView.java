@@ -51,10 +51,10 @@ public class bannerHeaderView extends ImageView {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
     int mImageDrawable = Settings.System.getIntForUser(mContext.getContentResolver(),
-                    "settings_header_image", 0, UserHandle.USER_CURRENT);
+                    "settings_header_image", 1, UserHandle.USER_CURRENT);
     boolean randomBanner = Settings.System.getIntForUser(mContext.getContentResolver(),
-                    "settings_header_image_random", 0, UserHandle.USER_CURRENT) == 1;
-    int randomBannerImage = ThreadLocalRandom.current().nextInt(0, 98);
+                    "settings_header_image_random", 1, UserHandle.USER_CURRENT) == 1;
+    int randomBannerImage = ThreadLocalRandom.current().nextInt(1, 98);
 	String bannerImage = "banner_" + String.valueOf(randomBanner ?  randomBannerImage : mImageDrawable);
 	int resId = getResources().getIdentifier(bannerImage, "drawable", "com.android.settings");
         setImageResource(resId);
