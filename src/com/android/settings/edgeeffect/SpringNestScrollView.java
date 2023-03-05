@@ -2,6 +2,7 @@ package com.android.settings.edgeeffect;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -21,7 +22,6 @@ import android.os.Vibrator;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Field;
-import java.time.Duration;
 
 public class SpringNestScrollView extends NestedScrollView {
     private static final FloatPropertyCompat<SpringNestScrollView> DAMPED_SCROLL = new FloatPropertyCompat<SpringNestScrollView>("value") {
@@ -74,7 +74,6 @@ public class SpringNestScrollView extends NestedScrollView {
     private int mTouchSlop;
     private VelocityTracker mVelocityTracker;
     private float mVelocity_multiplier = 0.3f;
-    private Duration hapticDuration = Duration.ofMillis(3);
 
     public SpringNestScrollView(Context context) {
         super(context);
@@ -158,9 +157,8 @@ public class SpringNestScrollView extends NestedScrollView {
         if (vibrator == null) {
             return;
         }
-        vibrator.vibrate(VibrationEffect.createOneShot(
-                hapticDuration.toMillis(),
-                VibrationEffect.EFFECT_TEXTURE_TICK));
+        AsyncTask.execute(
+                    () -> vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)));
     }
 
     @Override
@@ -691,6 +689,7 @@ public class SpringNestScrollView extends NestedScrollView {
         public void onAbsorb(int i) {
             SpringNestScrollView.this.finishScrollWithVelocity(((float) i) * mVelocityMultiplier);
             SpringNestScrollView.this.mDistance = 0.0f;
+            triggerVibration(getContext());
         }
 
         public void onPull(float f, float f2) {
@@ -708,7 +707,6 @@ public class SpringNestScrollView extends NestedScrollView {
             SpringNestScrollView springNestScrollView = SpringNestScrollView.this;
             springNestScrollView.setDampedScrollShift(springNestScrollView.mDistance * ((float) SpringNestScrollView.this.getHeight()));
             mReleased = false;
-            triggerVibration(getContext());
         }
 
         public void onRelease() {
