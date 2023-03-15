@@ -297,5 +297,12 @@
             android:min="0" />
 
     </PreferenceCategory>
+    
+    <Preference
+            android:key="misc_signalwifisb"
+            android:icon="@drawable/ic_signal"
+            android:fragment="com.crdroid.settings.fragments.statusbar.MiscSignalAndWifiIconSettings"
+            android:title="Misc Signal and Wifi Icon Settings"
+            android:summary="customize statusbar signal wifi icon settings" />
 
 </PreferenceScreen>
