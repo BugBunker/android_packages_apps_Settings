@@ -65,6 +65,7 @@ import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 import com.android.settings.widget.EntityHeaderController;
+import com.crdroid.settings.preferences.SystemSettingListPreference;
 
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements SplitLayoutListener,
@@ -653,7 +654,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             
     private void setDashboardStyle(Context context) {
         mDashBoardStyle = Settings.System.getIntForUser(context.getContentResolver(),
-                    Settings.System.SETTINGS_DASHBOARD_STYLE, 0, UserHandle.USER_CURRENT);
+                    "settings_dashboard_style", 0, UserHandle.USER_CURRENT);
     }
     
     private void getAboutPhoneStyle(Context context) {
