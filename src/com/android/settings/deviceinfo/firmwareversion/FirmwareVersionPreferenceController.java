@@ -35,6 +35,6 @@ public class FirmwareVersionPreferenceController extends BasePreferenceControlle
 
     @Override
     public CharSequence getSummary() {
-        return "#gtrcd";
+        return "#Ghostly";
     }
 }
