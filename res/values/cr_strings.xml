@@ -17,10 +17,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid Settings</string>
-    <string name="crdroid_settings_summary">Open goodness</string>
+    <string name="crdroid_settings_title">Ghost Lab</string>
+    <string name="crdroid_settings_summary">Let the hunt begun</string>
     <string name="reset_settings_title">Reset settings</string>
-    <string name="reset_settings_message">This will reset most crdroid settings to their default values for the current user. Would you like to continue?</string>
+    <string name="reset_settings_message">This will reset most lv settings to their default values for the current user. Would you like to continue?</string>
 
     <!-- Personalization Categories -->
     <string name="button_title">Buttons</string>
@@ -1415,4 +1415,15 @@
     <string name="vowifi_icon_moto">Moto VoWiFi Icons</string>
     <string name="vowifi_icon_emui">EMUI Icons</string>
     <string name="default_string">Default</string>
+    
+    <string name="quick_summary">Quick settings style, and customization</string>
+    <string name="bottom_summary">Powermenu, and other bottom option</string>
+    <string name="lockscreen_summary">Customize lockscreen clock and font </string>
+    <string name="mice_summary">Some special Ghost settings</string>
+    <string name="navigation_summary">Customize navigation bottom</string>
+    <string name="notification_summary">Reticker notifications and some other customization</string>
+    <string name="status_summary">Customize statusbar clock and icon</string>
+    <string name="sound_summary">Sound settings, Pulse and other volume customization</string>
+    <string name="user_summary">Verious User interface customization</string>
+    <string name="about_summary">Know about this project</string>
 </resources>
