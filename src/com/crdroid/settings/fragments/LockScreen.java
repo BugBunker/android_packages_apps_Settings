@@ -35,6 +35,7 @@ import androidx.preference.SwitchPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.OmniJawsClient;
 import com.android.internal.util.crdroid.Utils;
+import com.android.internal.util.crdroid.ThemeUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -42,6 +43,10 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.fragments.lockscreen.UdfpsSettings;
+
+import com.crdroid.settings.preferences.SystemSettingListPreference;
+import com.crdroid.settings.preferences.SystemSettingSwitchPreference;
+import com.crdroid.settings.preferences.colorpicker.SystemSettingColorPickerPreference;
 
 import java.util.List;
 
@@ -61,6 +66,7 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
     private static final String KG_CUSTOM_CLOCK_COLOR_ENABLED = "kg_custom_clock_color_enabled";
+    private static final String AMBIENT_ICONS_COLOR = "ambient_icons_color";
 
     private Preference mUdfpsSettings;
     private Preference mFingerprintVib;
@@ -69,6 +75,7 @@ public class LockScreen extends SettingsPreferenceFragment
     private Preference mWeather;
     private SwitchPreference mKGCustomClockColor;
     private Preference mUserSwitcher;
+    private SystemSettingColorPickerPreference mAmbientIconsColor;
 
     private OmniJawsClient mWeatherClient;
 
@@ -116,6 +123,8 @@ public class LockScreen extends SettingsPreferenceFragment
         mUserSwitcher = findPreference("persist.sys.flags.enableBouncerUserSwitcher");
         mUserSwitcher.setOnPreferenceChangeListener(this);
 
+        mAmbientIconsColor = (SystemSettingColorPickerPreference) findPreference(AMBIENT_ICONS_COLOR);
+        mAmbientIconsColor.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -131,6 +140,9 @@ public class LockScreen extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.Secure.putIntForUser(getContentResolver(),
                 Settings.Secure.PREF_KG_USER_SWITCHER, value ? 1 : 0, UserHandle.USER_CURRENT);
+	    return true;
+        } else if (preference == mAmbientIconsColor) {
+            ThemeUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;
