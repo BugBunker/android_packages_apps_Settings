@@ -110,5 +110,8 @@
     
     <string name="top_level_settings_title">Settings</string>
     <string name="my_device_settings">My device</string>
+    
+    <string name="haptic_on_slider_title">Volume Haptic feedback</string>
+    <string name="haptic_on_slider_summary">Haptic feedback when adjusting volume (Requires touch feedback to be enabled)</string>
 </resources>
 

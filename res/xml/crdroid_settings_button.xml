@@ -60,6 +60,13 @@
             android:summary="@string/button_backlight_summary"
             android:dialogTitle="@string/button_backlight_title"
             android:persistent="false" />
+            
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="haptic_on_slider"
+            android:icon="@drawable/ic_settings_sound"
+            android:title="@string/haptic_on_slider_title"
+            android:summary="@string/haptic_on_slider_summary"
+            android:defaultValue="true" />
 
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="anbi_enabled"
