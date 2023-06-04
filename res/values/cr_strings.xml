@@ -1530,6 +1530,7 @@
     <string name="settings_header_image_random_title">Random Settings header image</string>
     <string name="settings_header_image_random_summary">Enable random aesthetic settings dashboard banner/header images</string>
     
+<<<<<<< HEAD
     <!-- Settings Greetings -->
     <string name="settings_contextual_message_title">Settings contextual messages</string>
     <string name="settings_contextual_message_summary">Enable settings homepage messages that changes base on current time of the day</string>
@@ -1565,4 +1566,7 @@
     <string name="hide_developer_status_summary">Hide developer status from apps</string>
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
+    
+    <string name="battery_level_colors_title">Toggle colorful battery icon</string>
+    <string name="battery_level_colors_summary">Each battery level drop is color coded</string>
 </resources>
