@@ -124,6 +124,13 @@
             android:defaultValue="true" />
 
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_haptic_feedback"
+            android:icon="@drawable/ic_vibrate"
+            android:title="@string/qs_haptic_feedback_title"
+            android:summary="@string/qs_haptic_feedback_summary"
+            android:defaultValue="false" />
+
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="secure_lockscreen_qs_disabled"
             android:icon="@drawable/ic_lock_alert"
             android:title="@string/disable_qs_title"
