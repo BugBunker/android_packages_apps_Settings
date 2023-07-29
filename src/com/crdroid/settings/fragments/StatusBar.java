@@ -66,6 +66,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String KEY_STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String KEY_STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String KEY_STATUS_BAR_BATTERY_TEXT_CHARGING = "status_bar_battery_text_charging";
+    private static final String VOLTE_ICON_STYLE = "volte_icon_style";
+    private static final String VOWIFI_ICON_STYLE = "vowifi_icon_style";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -85,6 +87,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SwitchPreference mDataDisabled;
     private SwitchPreference mOldMobileType;
     private SwitchPreference mBatteryTextCharging;
+    private ListPreference mVolteIconStyle;
+    private ListPreference mVowifiIconStyle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -155,6 +159,18 @@ public class StatusBar extends SettingsPreferenceFragment implements
         mQuickPulldown.setOnPreferenceChangeListener(this);
         updateQuickPulldownSummary(mQuickPulldown.getIntValue(0));
 
+        mVowifiIconStyle = findPreference(VOWIFI_ICON_STYLE);
+        mVolteIconStyle = findPreference(VOLTE_ICON_STYLE);
+
+        int vowifiIconStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.VOWIFI_ICON_STYLE, 1);
+        if (vowifiIconStyle == 0) {
+            mVolteIconStyle.setEnabled(true);
+        } else {
+            mVolteIconStyle.setEnabled(false);
+        }
+        mVowifiIconStyle.setOnPreferenceChangeListener(this);
+
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
             mQuickPulldown.setEntries(R.array.status_bar_quick_qs_pulldown_entries_rtl);
@@ -183,6 +199,13 @@ public class StatusBar extends SettingsPreferenceFragment implements
         } else if (preference == mQuickPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateQuickPulldownSummary(value);
+            return true;
+        } else if (preference == mVowifiIconStyle) {
+            if ("0".equals(String.valueOf(newValue))) {
+                mVolteIconStyle.setEnabled(true);
+            } else {
+                mVolteIconStyle.setEnabled(false);
+            }
             return true;
         }
         return false;
