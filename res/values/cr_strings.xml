@@ -1568,4 +1568,7 @@
     
     <string name="battery_level_colors_title">Toggle colorful battery icon</string>
     <string name="battery_level_colors_summary">Each battery level drop is color coded</string>
+
+    <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Statusbar Brightness control</string>
 </resources>
