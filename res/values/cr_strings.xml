@@ -1414,4 +1414,5 @@
     <string name="vowifi_icon_oneplus">OnePlus VoWiFi Icon</string>
     <string name="vowifi_icon_moto">Moto VoWiFi Icons</string>
     <string name="vowifi_icon_emui">EMUI Icons</string>
+    <string name="default_string">Default</string>
 </resources>

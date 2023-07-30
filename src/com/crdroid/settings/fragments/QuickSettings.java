@@ -30,6 +30,7 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.os.Handler;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -39,6 +40,7 @@ import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.crdroid.Utils;
+import com.android.internal.util.crdroid.ThemeUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -76,8 +78,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private ListPreference mTileAnimationInterpolator;
     private SystemSettingListPreference mPageTransitions;
     private Handler mHandler;
-    private IOverlayManager mOverlayManager;
-    private IOverlayManager mOverlayService;
+    private ThemeUtils mThemeUtils;
     private SystemSettingListPreference mQsStyle;
 
     @Override
@@ -90,16 +91,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         final ContentResolver resolver = mContext.getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        final Context mContext = getActivity().getApplicationContext();
-        final ContentResolver resolver = mContext.getContentResolver();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
-
-        mUtils = new Utils(getActivity());
-
-        mOverlayService = IOverlayManager.Stub
-        .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
+   	mThemeUtils = new ThemeUtils(getActivity());
 
         mQsStyle = (SystemSettingListPreference) findPreference(KEY_QS_PANEL_STYLE);
+
         mCustomSettingsObserver.observe();
 
         mPageTransitions = (SystemSettingListPreference) findPreference(QS_PAGE_TRANSITIONS);
@@ -229,7 +224,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     }
 
     public void setQsStyle(String overlayName) {
-        mUtils.setOverlayEnabled("android.theme.customization.qs_panel", overlayName, "com.android.systemui");
+        mThemeUtils.setOverlayEnabled("android.theme.customization.qs_panel", overlayName, "com.android.systemui");
+
     }
 
     public static void reset(Context mContext) {
