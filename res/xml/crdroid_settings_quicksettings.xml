@@ -94,6 +94,13 @@
             android:title="@string/battery_estimate_title"
             android:summary="@string/battery_estimate_summary" /> -->
 
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:title="Brightness Percentage"
+            android:icon="@drawable/ic_brightness"
+            android:key="ANCIENT_TEXT_BRIGHTNESS"
+            android:summary="show hide brightness percentage text"
+            android:defaultValue="false" />
+
         <!-- Brightness slider -->
         <lineageos.preference.LineageSecureSettingListPreference
             android:key="qs_show_brightness_slider"
