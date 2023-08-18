@@ -144,6 +144,13 @@
             android:title="@string/disable_qs_title"
             android:summary="@string/disable_qs_summary"/>
 
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_dual_tone"
+            android:icon="@drawable/ic_shapes"
+            android:title="@string/qs_dual_tone_title"
+            android:summary="@string/qs_dual_tone_summary"
+            android:defaultValue="true" />
+
         <!-- QS styles -->
         <com.crdroid.settings.preferences.SystemSettingListPreference
             android:key="qs_panel_style"
