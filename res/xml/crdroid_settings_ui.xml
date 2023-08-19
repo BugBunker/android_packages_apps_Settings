@@ -36,6 +36,13 @@
         android:summary="@string/theme_customization_ui_style_summary"
         android:fragment="com.crdroid.settings.fragments.ui.UIStyles"/>
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="pie_animation_style"
+        android:icon="@drawable/ic_system_animation"
+        android:title="@string/pie_animation_style_title"
+        android:summary="@string/pie_animation_style_summary"
+        android:defaultValue="false" />
+
     <!-- Charging animation -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="charging_animation"

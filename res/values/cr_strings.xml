@@ -1479,5 +1479,8 @@
     <string name="clock_use_single_line_title">Lockscreen clock Format</string>
     <string name="single_line">Single-line</string>
     <string name="double_line">Double-line</string>
-    <string name="default_string">Default</string>
+
+      <!-- Android P animation style -->
+    <string name="pie_animation_style_title">Android P animation style</string>
+    <string name="pie_animation_style_summary">Enable Android P \"Default\" animations</string>
 </resources>
