@@ -77,6 +77,10 @@ public class LockScreen extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.crdroid_settings_lockscreen);
 
+	final Context mContext = getActivity().getApplicationContext();
+        final ContentResolver resolver = mContext.getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
         PreferenceCategory interfaceCategory = (PreferenceCategory) findPreference(LOCKSCREEN_INTERFACE_CATEGORY);
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
 

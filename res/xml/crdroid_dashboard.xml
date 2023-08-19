@@ -20,15 +20,15 @@
       
         <!-- QuickSettings -->
         <Preference
-            android:icon="@drawable/ic_settings_quicksettings"
 	    settings:layout="@layout/superioros_dashboard_preference_top"	
 	    android:title="@string/quicksettings_title"
+            android:icon="@drawable/ic_settings_quicksetting"
             android:summary="@string/quick_summary"
             android:fragment="com.crdroid.settings.fragments.QuickSettings" />
 
       <!-- Buttons -->
         <Preference
-            android:icon="@drawable/ic_settings_cogs"
+            android:icon="@drawable/ic_navbar_layout"
 	    settings:layout="@layout/superioros_dashboard_preference_middle"	
 	    android:title="@string/button_title"
             android:summary="@string/bottom_summary"
@@ -52,8 +52,8 @@
 
         <!-- Navigation -->
         <Preference
-            android:icon="@drawable/ic_settings_notifications"
             settings:layout="@layout/superioros_dashboard_preference_middle"
+            android:icon="@drawable/ic_navbar"
             android:title="@string/navigation_title"
             android:summary="@string/navigation_summary"
             android:fragment="com.crdroid.settings.fragments.Navigation" />
