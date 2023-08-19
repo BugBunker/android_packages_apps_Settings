@@ -57,7 +57,8 @@
 
     <!-- Ignore secure window -->
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
-        android:key="window_ignore_secure"
+	android:key="window_ignore_secure"
+	android:icon="@drawable/ic_lock_alert"
         android:title="@string/ignore_window_secure_title"
         android:summary="@string/ignore_window_secure_summary"
         android:defaultValue="false"/>
