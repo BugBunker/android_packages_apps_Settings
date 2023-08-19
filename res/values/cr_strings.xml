@@ -1483,4 +1483,7 @@
       <!-- Android P animation style -->
     <string name="pie_animation_style_title">Android P animation style</string>
     <string name="pie_animation_style_summary">Enable Android P \"Default\" animations</string>
+
+    <string name="lockscreen_user_switcher_title">User Switcher</string>
+    <string name="lockscreen_user_switcher_summary">Show user switcher when unlocking secured device</string>
 </resources>

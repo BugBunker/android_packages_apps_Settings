@@ -92,6 +92,13 @@
         android:key="lockscreen_interface_category"
         android:title="@string/lockscreen_interface_category">
 
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.flags.enableBouncerUserSwitcher"
+            android:icon="@drawable/ic_user"
+            android:title="@string/lockscreen_user_switcher_title"
+            android:summary="@string/lockscreen_user_switcher_summary"
+            android:defaultValue="true" />
+
         <lineageos.preference.LineageSecureSettingSwitchPreference
             android:key="lockscreen_media_metadata"
             android:icon="@drawable/ic_movie"
