@@ -60,12 +60,14 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String KEY_FP_ERROR_VIBRATE = "fp_error_vibrate";
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
+    private static final String KG_CUSTOM_CLOCK_COLOR_ENABLED = "kg_custom_clock_color_enabled";
 
     private Preference mUdfpsSettings;
     private Preference mFingerprintVib;
     private Preference mFingerprintVibErr;
     private Preference mRippleEffect;
     private Preference mWeather;
+    private SwitchPreference mKGCustomClockColor;
 
     private OmniJawsClient mWeatherClient;
 
@@ -96,6 +98,12 @@ public class LockScreen extends SettingsPreferenceFragment
             }
         }
 
+        mKGCustomClockColor = (SwitchPreference) findPreference(KG_CUSTOM_CLOCK_COLOR_ENABLED);
+        boolean mKGCustomClockColorEnabled = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.KG_CUSTOM_CLOCK_COLOR_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mKGCustomClockColor.setChecked(mKGCustomClockColorEnabled);
+        mKGCustomClockColor.setOnPreferenceChangeListener(this);
+
         mWeather = (Preference) findPreference(KEY_WEATHER);
         mWeatherClient = new OmniJawsClient(getContext());
         updateWeatherSettings();
@@ -103,6 +111,14 @@ public class LockScreen extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Context mContext = getActivity().getApplicationContext();
+	ContentResolver resolver = mContext.getContentResolver();
+        if (preference == mKGCustomClockColor) {
+            boolean val = (Boolean) newValue;
+            Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.KG_CUSTOM_CLOCK_COLOR_ENABLED, val ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        }
         return false;
     }
 
