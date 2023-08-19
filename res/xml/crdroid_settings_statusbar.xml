@@ -132,6 +132,17 @@
 	        android:summary="@string/statusbar_notif_count_summary"
 	        android:defaultValue="false" />
 
+        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
+            android:key="max_visible_notification_icons"
+            android:icon="@drawable/ic_notification_peek"
+            android:title="@string/max_visible_notification_icons_title"
+            android:summary="@string/max_visible_notification_icons_summary"
+            android:defaultValue="5"
+            settings:defaultValueText="5"
+            android:max="10"
+            settings:min="0"
+            settings:units="" />
+
         <com.crdroid.settings.preferences.SystemSettingListPreference 
             android:key="volte_icon_style" 
             android:icon="@drawable/ic_shapes"
