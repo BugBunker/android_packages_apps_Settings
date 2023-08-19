@@ -85,9 +85,17 @@
         <!-- UserInterface -->
         <Preference
             android:icon="@drawable/ic_color_bucket"
-            settings:layout="@layout/arc_card_about_bottom"
+            settings:layout="@layout/arc_card_about_middle"
             android:title="@string/ui_title"
             android:summary="@string/user_summary"
             android:fragment="com.crdroid.settings.fragments.UserInterface" />
+
+        <Preference
+            android:key="ui_theme_engine"
+            android:icon="@drawable/ic_themes"
+            android:title="@string/ui_theme_engine_title"
+            android:summary="@string/ui_theme_engine_summary"
+       	    settings:layout="@layout/arc_card_about_bottom"
+            android:fragment="com.crdroid.settings.fragments.ui.ThemeEngine" />
 
 </PreferenceScreen>
