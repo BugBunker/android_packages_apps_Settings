@@ -88,14 +88,14 @@
     <string name="dashboard_random5">Namaste</string>
     <string name="dashboard_random6">What\'s up</string>
     <string name="dashboard_random_greetings1">Try to find some easter eggs!</string>
-    <string name="dashboard_random_greetings2">Rising from the bottom?</string>
-    <string name="dashboard_random_greetings3">Try using the search bar!</string>
+    <string name="dashboard_random_greetings2">I’m scared to close my eyes</string>
+    <string name="dashboard_random_greetings3">They’re here. Ghosts!</string>
     <string name="dashboard_random_greetings4">Enjoy your day!</string>
-    <string name="settings_random1">Searching for something?</string>
+    <string name="settings_random1">Would you like to see a magic trick?</string>
     <string name="settings_random2">Find and you shall see</string>
     <string name="settings_random3">Seek and you shall find</string>
     <string name="settings_random4">Finders keepers</string>
-    <string name="settings_random5">Search settings</string>
+    <string name="settings_random5">Is there someone inside you?</string>
     <string name="settings_random6">You can\'t find something that doesn\'t exists!</string>
     <string name="default_user">User</string>
     
