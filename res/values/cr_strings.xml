@@ -1530,7 +1530,6 @@
     <string name="settings_header_image_random_title">Random Settings header image</string>
     <string name="settings_header_image_random_summary">Enable random aesthetic settings dashboard banner/header images</string>
     
-<<<<<<< HEAD
     <!-- Settings Greetings -->
     <string name="settings_contextual_message_title">Settings contextual messages</string>
     <string name="settings_contextual_message_summary">Enable settings homepage messages that changes base on current time of the day</string>

@@ -67,5 +67,4 @@
         android:title="@string/monet_engine_tint_background_title"
         android:summary="@string/monet_engine_tint_background_summary"
         android:defaultValue="false" />
-
 </PreferenceScreen>

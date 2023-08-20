@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.alpha.settings.fragments;
+package com.crdroid.settings.fragments;
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager

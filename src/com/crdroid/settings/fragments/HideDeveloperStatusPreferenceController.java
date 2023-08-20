@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.alpha.settings.fragments;
+package com.crdroid.settings.fragments;
 
 import android.content.Context;
 import android.provider.Settings;
