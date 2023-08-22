@@ -49,7 +49,7 @@
             android:key="qs_tile_secondary_label_size"
             android:title="@string/qs_tile_secondary_label_size_title"
             android:max="18"
-            settings:min="8"
+            settings:min="0"
             settings:interval="1"
             settings:units="sp"
             android:defaultValue="13" />
