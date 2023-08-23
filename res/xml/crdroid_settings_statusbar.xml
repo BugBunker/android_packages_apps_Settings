@@ -301,21 +301,21 @@
             android:icon="@drawable/ic_arrow_up_24"
             android:max="10"
             android:title="@string/statusbar_top_padding"
-            settings:min="-1" />
+            settings:min="-5" />
 
         <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
             android:key="statusbar_left_padding"
             android:icon="@drawable/ic_arrow_left_24"
             android:title="@string/statusbar_left_padding"
             android:max="100"
-            android:min="0" />
+            settings:min="-5" />
 
         <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
             android:key="statusbar_right_padding"
             android:icon="@drawable/ic_arrow_right_24"
             android:title="@string/statusbar_right_padding"
             android:max="100"
-            android:min="0" />
+            settings:min="-5" />
 
     </PreferenceCategory>
     
