@@ -102,6 +102,24 @@
             android:summary="%s"
             android:defaultValue="0" />
 
+      <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:icon="@drawable/ic_brightness"
+            android:max="100"
+            android:min="0"
+            settings:units="%"
+            android:defaultValue="100" />
+
+        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_dialog_dim"
+            android:title="@string/power_menu_dialog_dim"
+            android:icon="@drawable/ic_color_bucket"
+            android:max="100"
+            android:min="0"
+            settings:units="%"
+            android:defaultValue="50" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
