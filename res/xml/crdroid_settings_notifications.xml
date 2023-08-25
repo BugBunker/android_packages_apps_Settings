@@ -65,6 +65,15 @@
             android:summary="@string/notification_heads_up_summary"
             android:defaultValue="true" />
 
+        <com.crdroid.settings.preferences.SystemSettingListPreference
+            android:key="heads_up_notifications_threshold"
+            android:title="@string/hun_importance_title"
+            android:icon="@drawable/ic_headsup"
+            android:summary="%s"
+            android:entries="@array/hun_importance_entries"
+            android:entryValues="@array/hun_importance_values"
+            android:defaultValue="4" />
+
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="less_boring_heads_up"
             android:icon="@drawable/ic_headsup_sleep"
