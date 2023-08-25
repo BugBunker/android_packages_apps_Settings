@@ -65,6 +65,13 @@
             android:summary="@string/notification_heads_up_summary"
             android:defaultValue="true" />
 
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="force_expanded_notifications"
+            android:icon="@drawable/ic_headsup_sleep"
+            android:title="@string/force_expanded_notifications_title"
+            android:summary="@string/force_expanded_notifications_summary"
+            android:defaultValue="false" />
+
         <com.crdroid.settings.preferences.SystemSettingListPreference
             android:key="heads_up_notifications_threshold"
             android:title="@string/hun_importance_title"
