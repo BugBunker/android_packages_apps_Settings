@@ -1636,8 +1636,6 @@
     <string name="ambient_notification_light_color_mode_wall">Wallpaper color</string>
     <string name="ambient_notification_light_color_mode_random">Random color</string>
     <string name="ambient_image_title">Ambient Image</string>
-    <string name="file_header_select_title">Select local image</string>
-    <string name="file_header_select_summary">Select image from storage (Dont use google photos)</string>
 
     <!-- Font Customizations for Functions -->
     <string name="function_font_stock">Normal (default)</string>

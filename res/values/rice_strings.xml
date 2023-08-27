@@ -113,5 +113,8 @@
     
     <string name="haptic_on_slider_title">Volume Haptic feedback</string>
     <string name="haptic_on_slider_summary">Haptic feedback when adjusting volume (Requires touch feedback to be enabled)</string>
+
+    <string name="qs_random_header_image_title">Random QS Header Image</string>
+    <string name="qs_random_header_image_summary">Show random qs header images instead of static one</string>
 </resources>
 
