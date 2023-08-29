@@ -1689,4 +1689,8 @@
     <!-- Force expanded notifications -->
     <string name="force_expanded_notifications_title">Force expand notifications</string>
     <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
+
+    <!-- QS Data Usage -->
+    <string name="qs_data_usage_panel_title">Show alternative Data Usage </string>
+    <string name="qs_data_usage_panel_summary">Display a dialog with data usage details on expanded qs panel</string>
 </resources>
