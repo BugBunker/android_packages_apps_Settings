@@ -1693,4 +1693,8 @@
     <!-- QS Data Usage -->
     <string name="qs_data_usage_panel_title">Show alternative Data Usage </string>
     <string name="qs_data_usage_panel_summary">Display a dialog with data usage details on expanded qs panel</string>
+
+    <!-- QSTile requires unlocking before being accessible -->
+    <string name="qstile_requires_unlocking_title">Secure QS tiles require unlocking</string>
+    <string name="qstile_requires_unlocking_summary">The following QS tiles require unlocking before you can acccess them from lock screen:\nAirplane, Cellular, NFC, Hotspot, USB tethering and Location</string>
 </resources>

@@ -164,6 +164,13 @@
             android:title="@string/disable_qs_title"
             android:summary="@string/disable_qs_summary"/>
 
+        <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+            android:key="qstile_requires_unlocking"
+            android:icon="@drawable/ic_lock_alert"
+            android:title="@string/qstile_requires_unlocking_title"
+            android:summary="@string/qstile_requires_unlocking_summary"
+            android:defaultValue="true"/>
+
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_dual_tone"
             android:icon="@drawable/ic_shapes"
