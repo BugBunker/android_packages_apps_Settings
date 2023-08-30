@@ -36,7 +36,7 @@
             android:key="evl_mobile_type_padding_left"
             android:dependency="evl_mobile_type_layout_switch"
             android:defaultValue="2"
-            android:min="-8"
+            settings:min="-8"
             settings:units="dp" />
         <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
             android:max="12"
@@ -44,7 +44,7 @@
             android:key="evl_mobile_type_padding_right"
             android:dependency="evl_mobile_type_layout_switch"
             android:defaultValue="1"
-            android:min="-8"
+            settings:min="-8"
             settings:units="dp" />
     </PreferenceCategory>
     
@@ -104,7 +104,7 @@
             android:title="Margin Top"
             android:dependency="IDC_WIFI_CUSTOM_DIMENSION"
             android:max="10"
-            android:min="-10"
+            settings:min="-10"
             android:defaultValue="0"
             settings:units="dp"/> 
     </PreferenceCategory>
