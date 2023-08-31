@@ -70,7 +70,7 @@ import org.json.JSONException;
 
 public class QsHeaderImageStyles extends SettingsPreferenceFragment {
 
-    private static final int HEADER_COUNT = 36;
+    private static final int HEADER_COUNT = 74;
 
     private RecyclerView mRecyclerView;
     private List<String> mQsHeaderImages;
