@@ -50,6 +50,14 @@
         settings:interval="5"
         android:defaultValue="5"
         settings:units="@string/unit_seconds" />
+        
+    <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
+        android:key="qs_header_size"
+        android:title="@string/large_qs_switch_title"
+        android:max="400"
+        settings:min="110"
+        settings:interval="1"
+        android:defaultValue="110" />
 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="status_bar_clock_seconds"

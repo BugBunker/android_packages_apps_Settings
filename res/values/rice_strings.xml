@@ -120,5 +120,8 @@
     <!-- Toast app icon -->
     <string name="toast_icon_title">Toast app icon</string>
     <string name="toast_icon_summary">Display the app\'s icon corresponding with the toast</string>
+    
+    <!-- QS Header Size -->
+    <string name="large_qs_switch_title">QS Header Size</string>
 </resources>
 
