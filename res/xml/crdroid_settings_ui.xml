@@ -106,6 +106,13 @@
         android:title="@string/pie_animation_style_title"
         android:summary="@string/pie_animation_style_summary"
         android:defaultValue="false" />
+        
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference  
+        android:key="toast_icon"
+        android:icon="@drawable/ic_system_animation"
+        android:title="@string/toast_icon_title"
+        android:summary="@string/toast_icon_summary"
+        android:defaultValue="false" />
 
     <com.crdroid.settings.preferences.SystemSettingListPreference
         android:key="toast_animation"
